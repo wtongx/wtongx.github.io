@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面标题显示</title>
+    <!--外部引用css样式-->
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <!--设置css样式-->
+    <style type="text/css">
+        a:hover{
+            color:red;
+            font-size:20px;
+        }
+        p,form{
+           background:pink;
+           font-size:20px;/*设置文字字号*/
+           color:red;/*设置文字颜色*/
+           font-weight:bold;/*设置字体加粗*/
+        }
+        span{
+            font-size: 15px;
+            color: blue;
+            font-weight: 100;
+        }
+        #setGreen{
+            color: purple;
+        }
+        .stress{
+            color:chartreuse;
+        }
+        .brand th{            
+            color:blueviolet;
+        }
+        ol li{
+            border:1px solid red;
+        }
+    </style>
+    <!--设置javascript交互-->
+      <script type="text/javascript">  
+    function openWindow()
+    // 新窗口打开时弹出确认框，是否打开
+{   var myWindow=confirm("是否打开？")
+    // 通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/
+    if(myWindow){window.open('http://www.imooc.com/','_blank','width=400','heigh=500')
+    //打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。
+    }
+}
+  </script>
+</head>
+<body>
+   <!--注释语句-->
+    <h1>我的第一个标题</h1>     <!--#通过h1 - h6 标签来定义的-->
+    <h2>我的第二个标题</h2>
+    <h3>我的第三个标题</h2>
+    <h4>我的第四个标题</h2>
+    <h5>我的第五个标题</h2>
+    <h6>我的第六个标题</h2>
+    <!--段落-->
+    <p>我的第一个段落。</p>
+    <p>我的第二个段落。Web浏览器（如<span id="setGreen">谷歌浏览器，Internet Explorer，Firefox，Safari</span>）是用于读取HTML文件，并将其作为网页显示。
+        Web浏览器（如<em>谷歌浏览器，Internet Explorer，Firefox，Safari</em>）是用于读取HTML文件，并将其作为网页显示。
+        Web浏览器（如<span class="stress" style="color:pink">谷歌浏览器，Internet Explorer，Firefox，Safari</span>）是用于读取HTML文件，并将其作为网页显示。<br/>
+        浏览器并不是直接显示的HTML标签，但可以使用标签来决定如何展现HTML页面的内容给用户：</p>
+    <!--超链接-->
+    <a href="http://www.runoob.com">这是一个链接</a>
+    <!--图片-->
+    <img src="images/微信截图_20191021161121.png" width="258" height="239" />
+    <!--第一板块带·的列表-->
+    <div  id="独立板块标记"> 
+         <ul>
+            <li>我的第一个列表信息（带·）</li>
+            <img src="images/微信截图_20191021161121.png" alt="下载失败时的替换此文本" title = "提示文本，图像可以是GIF，PNG，JPEG格式的图像文件">
+        </ul>
+    </div>
+    <!--第二一板块带序号的列表-->
+    <div  id="板块，下面列表带排行序号"> 
+        <ol>
+           <li>我的第一个列表信息（带数字编号1.）</li>
+           <li><a  href="http://www.runoob.com"  title="鼠标滑过显示的文本">链接显示的文本</a></li>
+        </ol>
+    </div>
+    <!--表格table-->
+    <div>
+        <table summary="表格简介，不显示">
+        <caption>表格标题</caption>
+        <tr class="brand">
+            <th>产品名称 </th>
+            <th>品牌 </th>
+        </tr>
+        <tr>
+            <td>耳机 </td>
+            <td>联想 </td>
+        </tr>
+        </table>
+    </div>
+    <!--表单标签-->
+    <form    method="传送方式get/post"   action="服务器文件save.php"  method="post" >
+        <label for="username">用户名:</label>
+        <input type="text" name="username" value="文本提示"/><br/>
+        <label for="pass">密码:</label>
+        <input type="password" name="pass" /><br/>
+        <label>性别:</label>
+            <label>男</label>
+            <input type="radio" value="1"  name="gender" />
+            <label>女</label>
+            <input type="radio" value="2"  name="gender" /><br/>
+        <label>个人简介:</label>
+            <textarea  rows="3" cols="2">支持多行文本输入</textarea><br/>
+        <label>爱好（下拉列表框）:</label>
+            <select multiple="multiple">    <!--设置多选-->
+            <option value="向服务器提交值" selected="selected">默认选中</option>
+            <option value="旅游">旅游</option>
+            <option value="运动">运动</option>
+            <option value="购物">购物</option>
+            </select><br/>
+        <label>你对什么运动感兴趣:（复选框）</label>
+            <br />
+          <label for="慢跑">慢跑</label>
+            <input type="checkbox" name="sport" id="run" />
+            <br />
+            <label for="登山">登山</label>
+            <input type="checkbox" name="sport" id="climb" />
+            <br />
+            <label for="篮球">篮球</label>
+            <input type="checkbox" name="sport" id="basketball" ><br/>
+        <input type="reset" value="重置" name="resetBtn" />
+        <input type="submit" value="提交" name="submitBtn" />
+        <input type="button" value="新窗口打开网站" onclick="openWindow()" />
+    </form>
+ </body>
+</html>
